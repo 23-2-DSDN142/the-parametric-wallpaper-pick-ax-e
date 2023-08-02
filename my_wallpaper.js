@@ -250,10 +250,23 @@ function clouds()
 
 function wallpaper_background()         //Main function. Calls the other functions
 {     
-
   if(night == true){
     
-    background(0);
+   background(0);
+  }
+  if(night == false){
+    background(230, 253, 255);
+  }
+
+}
+
+
+
+
+function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+ 
+  if(night == true){
+
     strokeWeight(gridSize/33);
     
     //if(nightSky1 == false){
@@ -291,7 +304,7 @@ function wallpaper_background()         //Main function. Calls the other functio
     night_Lake_creation(44, 100, 180); //lake colour
   }
   else if(night == false){
-    background(230, 253, 255);
+    //background(230, 253, 255);
 
     stroke(173, 255, 255);  
     fill(173, 255, 243); 
@@ -322,23 +335,7 @@ function wallpaper_background()         //Main function. Calls the other functio
 
   }
   
-}
-
-
-
-
-function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
- 
 //wallpaper_background();      
-
-
-
-
- 
-
-
-
-
   
 
   
