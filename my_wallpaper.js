@@ -2,7 +2,7 @@
 
 let night = true  ; // if set false makes it day
 
-let starNumber = 400;  //higher number more stars
+let starNumber = 300;  //higher number more stars
 let cloudNumber = 50;
 let smallClouds = true;
 
@@ -270,7 +270,7 @@ function wallpaper_background()         //Main function. Calls the other functio
       //}
       
 
-      if(moon == true){
+      if(moon){
         
         showMoon();
   
@@ -278,11 +278,11 @@ function wallpaper_background()         //Main function. Calls the other functio
 
       if(left_Mountain == true){
       
-      if(moon == true){
+      if(moon){
       moonMountain();
       
       }
-      else if(moon == false){
+      else{
       
       mountain();
       }
