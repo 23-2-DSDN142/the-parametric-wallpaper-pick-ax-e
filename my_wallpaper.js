@@ -1,6 +1,6 @@
 //your parameter variables go here!
 
-let night = true; // if set false makes it day
+let night = true  ; // if set false makes it day
 
 let starNumber = 400;  //higher number more stars
 let cloudNumber = 50;
@@ -12,7 +12,7 @@ let sunny = true;
 
 let left_Mountain = true;
 
-let gridSize = 100;
+let gridSize = 200;
 
 
 function setup_wallpaper(pWallpaper) {
@@ -253,7 +253,7 @@ function wallpaper_background()         //Main function. Calls the other functio
 
   if(night == true){
     
-    background(0, 0, 0);
+    background(0);
     strokeWeight(gridSize/33);
     
     //if(nightSky1 == false){
