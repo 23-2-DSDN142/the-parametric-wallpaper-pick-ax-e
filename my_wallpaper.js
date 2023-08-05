@@ -1,12 +1,13 @@
 //your parameter variables go here!
 
-let night = true  ; // if set false makes it day
+let night = true	  ; // if set false makes it day
+//let day  = false; // seing if I can put both day and night on the same screen if I change the if statement
 
-let starNumber = 300;  //higher number more stars
+let starNumber = 1000;  //higher number more stars
 let cloudNumber = 50;
 let smallClouds = true;
 
-let nightSky1 = true;  // the one with stars
+//let nightSky1 = true;  // the one with stars
 let moon = true;   
 let sunny = true;  
 
@@ -16,14 +17,14 @@ let gridSize = 200;
 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER); 
+  pWallpaper.output_mode(GRID_WALLPAPER);  //DEVELOP_GLYPH
   pWallpaper.resolution(FIT_TO_SCREEN);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = gridSize;
+  pWallpaper.grid_settings.cell_width  = gridSize; 
   pWallpaper.grid_settings.cell_height = gridSize;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.row_offset  = gridSize/2;
 }
 
 function paintStars()
@@ -304,6 +305,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     night_Lake_creation(44, 100, 180); //lake colour
   }
   else if(night == false){
+    //if(day){
     //background(230, 253, 255);
 
     stroke(173, 255, 255);  
