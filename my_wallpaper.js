@@ -1,24 +1,23 @@
 //your parameter variables go here!
 
 let night = true	  ; // if set false makes it day
-//let day  = false; // seing if I can put both day and night on the same screen if I change the if statement
 
-let starNumber = 1000;  //higher number more stars
-let cloudNumber = 50;
-let smallClouds = true;
+let starNumber = 500;  //higher number more stars
+let cloudNumber = 50; //higher more clouds
+let smallClouds = true; 
 
-//let nightSky1 = true;  // the one with stars
+let graySky = true //if set false sky is light blue
+
 let moon = true;   
-let sunny = true;  
+let sunny = false;  
 
 let left_Mountain = true;
 
 let gridSize = 200;
 
-
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);  //DEVELOP_GLYPH
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.output_mode(GRID_WALLPAPER);  //DEVELOP_GLYPH //GRID_WALLPAPER //GLIDE_WALLPAPER
+  pWallpaper.resolution(A3); //NINE_PORTRAIT //NINE_LANDSCAPE
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -26,7 +25,6 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.grid_settings.cell_height = gridSize;
   pWallpaper.grid_settings.row_offset  = gridSize/2;
 }
-
 function paintStars()
       {
        
@@ -256,7 +254,15 @@ function wallpaper_background()         //Main function. Calls the other functio
    background(0);
   }
   if(night == false){
-    background(230, 253, 255);
+
+    if(graySky == true)
+    //background(230, 253, 255);
+    background(170);
+    else
+    {
+      background(230, 253, 255);
+    }
+    
   }
 
 }
@@ -327,7 +333,11 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     else if(sunny == false)
     {
       clouds();
+      
+      if(left_Mountain == true)
+      {
       dayMountain();
+      }
     }
 
     
