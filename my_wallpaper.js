@@ -4,16 +4,16 @@ let night = true	  ; // if set false makes it day
 
 let starNumber = 500;  //higher number more stars
 let cloudNumber = 300; //higher more clouds
-let smallClouds = true; 
+let smallClouds = true; //adds small amount of clouds from a fraction of cloudNumber
 
-let graySky = false	; //if set false sky is light blue
+let graySky = false	; //if set false the day sky is light blue
 
 let moon = true;   
-let sunny = true;  
+let sunny = true;  //makes a sun if it's true
 
-let left_Mountain = true;
+let left_Mountain = true; //makes a mountain
 
-let gridSize = 200;
+let gridSize = 200; //everything scales with this variable
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);  //DEVELOP_GLYPH //GRID_WALLPAPER //GLIDE_WALLPAPER
@@ -84,11 +84,11 @@ function mainCircle()
 
 function showMoon()
 {
-  stroke(240);       //240                //moon
+  stroke(240);                       //moon
   strokeWeight(gridSize/150);
   fill(255); //255
   
-  circle(gridSize/3.2,gridSize/7,gridSize/10); //gridsize/7 //10
+  circle(gridSize/3.2,gridSize/7,gridSize/10); 
 }
 
 function moonMountain()
@@ -256,7 +256,7 @@ function wallpaper_background()
   if(night == false){
 
     if(graySky == true)
-    //background(230, 253, 255);
+    
     background(170);
     else
     {
@@ -276,18 +276,13 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
     strokeWeight(gridSize/33);
     
-    //if(nightSky1 == false){
-    //will be black and white
-
-    //}
-    //else if(nightSky1 == true){
+  
       stroke(13, 28, 119);  
       fill(61, 63, 173); 
       
       mainCircle();
       paintStars();
       
-      //}
       
 
       if(moon){
@@ -311,8 +306,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     night_Lake_creation(44, 100, 180); //lake colour
   }
   else if(night == false){
-    //if(day){
-    //background(230, 253, 255);
+    
 
     stroke(173, 255, 255);  
     fill(173, 255, 243); 
@@ -347,8 +341,5 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
   }
   
-//wallpaper_background();      
-  
-
   
 }
