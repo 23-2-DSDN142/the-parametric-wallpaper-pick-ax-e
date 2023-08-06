@@ -3,21 +3,21 @@
 let night = true	  ; // if set false makes it day
 
 let starNumber = 500;  //higher number more stars
-let cloudNumber = 50; //higher more clouds
+let cloudNumber = 300; //higher more clouds
 let smallClouds = true; 
 
-let graySky = true //if set false sky is light blue
+let graySky = false	; //if set false sky is light blue
 
 let moon = true;   
-let sunny = false;  
+let sunny = true;  
 
 let left_Mountain = true;
 
 let gridSize = 200;
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);  //DEVELOP_GLYPH //GRID_WALLPAPER //GLIDE_WALLPAPER
-  pWallpaper.resolution(A3); //NINE_PORTRAIT //NINE_LANDSCAPE
+  pWallpaper.output_mode(DEVELOP_GLYPH);  //DEVELOP_GLYPH //GRID_WALLPAPER //GLIDE_WALLPAPER
+  pWallpaper.resolution(FIT_TO_SCREEN); //NINE_PORTRAIT //NINE_LANDSCAPE
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -84,11 +84,11 @@ function mainCircle()
 
 function showMoon()
 {
-  stroke(240,240,240);                       //moon
+  stroke(240);       //240                //moon
   strokeWeight(gridSize/150);
-  fill(255,255,255);
+  fill(255); //255
   
-  ellipse(gridSize/3.2,gridSize/7,gridSize/10,gridSize/10);
+  circle(gridSize/3.2,gridSize/7,gridSize/10); //gridsize/7 //10
 }
 
 function moonMountain()
