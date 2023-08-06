@@ -247,7 +247,7 @@ function clouds()
       }
 }
 
-function wallpaper_background()         //Main function. Calls the other functions
+function wallpaper_background()         
 {     
   if(night == true){
     
